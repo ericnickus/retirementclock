@@ -1,4 +1,5 @@
 import React from "react";
+//import { useState } from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -6,6 +7,10 @@ const MyDatepickerComponent = (props) => {
     
     const onChangeHandler = (start) => {
         props.setEndDate( new Date(start));
+
+        if(! props.isActive){
+           props.setIsActive(true);
+        }
     }
 
     return (

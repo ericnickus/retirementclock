@@ -5,6 +5,7 @@ import Timer  from './components/Timer';
 
 const App = () => {
 
+const [isActive, setIsActive] = useState(false);
 const [endDate, setEndDate] = useState(new Date());
 const now = new Date();
 
@@ -49,7 +50,6 @@ const now = new Date();
       document.getElementById("mainback").style.backgroundImage = "url(http://localhost:3000/" + bg + ".png)";
     };
 
-    
     return (
         <div className="mainback" id="mainback" style={{backgroundImage: `url("http://localhost:3000/retireback1.png")`}}>
 
@@ -104,14 +104,16 @@ const now = new Date();
       </div>
         <div className="xxx">
           <h3>Change to your retirement date:</h3>
-          <MyDatepickerComponent setEndDate={ setEndDate } endDate={ endDate } now={ now }/>
+          <MyDatepickerComponent setEndDate={ setEndDate } endDate={ endDate } now={ now }
+            setIsActive={ setIsActive } isActive={ isActive }/>
+
         </div>
 
        <div className="container" >
         <h1 className="header">
           Happy Retirement in
         </h1>
-        <Timer deadline={ endDate } />
+        <Timer deadline={ endDate } isActive={ isActive } />
       </div>
 :     <div className="yyy"></div>;
 

@@ -19,7 +19,7 @@ code {
 }
 
 .mainback{
-height:1000px;
+height:100vh;
 text-align:center;
 /*background: url('http://localhost:3000/retireback8.png') no-repeat; */
 background-color:yellow;
