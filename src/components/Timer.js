@@ -11,6 +11,7 @@ const Timer = ({ deadline = new Date().toString(), isActive }) => {
   const [time, setTime] = useState(parsedDeadline - Date.now());
   //console.log(isActive);
 
+// re-calculate the timer settings every second  
  useEffect(() => {
   const interval = setInterval(
     () => setTime(parsedDeadline - Date.now()),
@@ -20,7 +21,7 @@ const Timer = ({ deadline = new Date().toString(), isActive }) => {
   return () => clearInterval(interval);
   }, [parsedDeadline]);
  
-
+// if datepicker not initialized, don't show timer
     if(!isActive){
       return null;
     }
