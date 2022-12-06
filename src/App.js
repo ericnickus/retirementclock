@@ -47,11 +47,11 @@ const now = new Date();
     };
 
     const changeBackground = (bg) => {
-      document.getElementById("mainback").style.backgroundImage = "url(http://localhost:3000/" + bg + ".png)";
+      document.getElementById("mainback").style.backgroundImage = "url(https://retirecountdown.netlify.app/" + bg + ".png)";
     };
 
     return (
-        <div className="mainback" id="mainback" style={{backgroundImage: `url("http://localhost:3000/retireback1.png")`}}>
+        <div className="mainback" id="mainback" style={{backgroundImage: `url("https://retirecountdown.netlify.app/retireback1.png")`}}>
 
         <div className="radio-buttons">
          <h3>Select a background</h3>
